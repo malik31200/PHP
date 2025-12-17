@@ -9,12 +9,15 @@
 ?>
 
 <h1>Trouver le nombre choisi par l'ordinateur</h1>
+<!-- Bouton réinitialiser -->
 <form action="#" method="POST">
     <input type="hidden" name="reinit" value="yes">
     <input type="submit" value="Réinitialiser">
 </form>
+
+<!-- Formulaire de saisie -->
 <form action="#" method="POST">
-    <label for="rayon">Quel est le chiffre : </label>
+    <label for="chiffre">Quel est le chiffre : </label>
     <input type="number" name="chiffre" id="chiffre"><br/>
     <input type="submit" value="Valider">
 </form>
@@ -24,6 +27,7 @@
         $_SESSION["chiffreAleatoire"] = rand(1, 10);;
     }
 
+    /* Traitement du chiffre saisi */
     if(isset($_POST["chiffre"]) && $_POST["chiffre"] > 0){
         $chiffreSaisi = (int)$_POST["chiffre"];
         $chiffreallea = $_SESSION["chiffreAleatoire"];
