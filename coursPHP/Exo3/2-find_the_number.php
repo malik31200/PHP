@@ -2,19 +2,31 @@
     include("common/header.php");
     include("common/menu1.php");
 
-    $chiffreallea = 5;
+    session_start();
+    if(!isset($_SESSION["chiffreAleatoire"])){
+        $_SESSION["chiffreAleatoire"] = rand(1, 10);
+    }
 ?>
 
 <h1>Trouver le nombre choisi par l'ordinateur</h1>
-    <form action="#" method="POST">
+<form action="#" method="POST">
+    <input type="hidden" name="reinit" value="yes">
+    <input type="submit" value="Réinitialiser">
+</form>
+<form action="#" method="POST">
     <label for="rayon">Quel est le chiffre : </label>
     <input type="number" name="chiffre" id="chiffre"><br/>
     <input type="submit" value="Valider">
 </form>
 
 <?php
+    if(isset($_POST["reinit"]) && $_POST["reinit"] === "yes"){
+        $_SESSION["chiffreAleatoire"] = rand(1, 10);;
+    }
+
     if(isset($_POST["chiffre"]) && $_POST["chiffre"] > 0){
         $chiffreSaisi = (int)$_POST["chiffre"];
+        $chiffreallea = $_SESSION["chiffreAleatoire"];
         if($chiffreallea === $chiffreSaisi) {
         echo "<h3>Félicitations!! Vous avez trouvez le bon chiffre.</h3>";
        } else {
