@@ -8,5 +8,6 @@
         <li><a href="3-calculate_average.php">Excercice 5</a></li>
         <li><a href="4-display_character.php">Excercice 6</a></li>
         <li><a href="5-array.php">Excercice 7</a></li>
+        <li><a href="6-info_character.php">Excercice 8</a></li>
     </ul>
 </nav>
