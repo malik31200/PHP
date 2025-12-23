@@ -48,7 +48,7 @@
                 echo "<b>".$index."</b> : ".$value. "<br/>";
             }
             if($index === "Sexe"){
-                "<b> Sexe </b> :"
+                "<b> Sexe </b> :";
                 if($value === true){
                     echo "Homme <br/>";
                 } else {
