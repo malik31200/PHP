@@ -7,6 +7,11 @@ class Personnage {
     public $sexe = true;
     public $pm = 80;
     public $pv = 75;
+
+    public function 
+    public function afficherMesInfos(){
+
+    }
 }
     include("common/header.php");
     include("common/menu1.php");
@@ -16,7 +21,7 @@ class Personnage {
 
 <?php
     $p1 = new Personnage();
-    echo "Nom : ". $p1->nom . "<br/>";
+    echo "Nom : ". $p1->nom . "<br/>"; //afficher informations
     echo "Age : ". $p1->age . "<br/>";
     $p2 = new Personnage();
     $p2->nom = "Yuna";
