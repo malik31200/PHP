@@ -8,10 +8,6 @@ class Personnage {
     public $pm = 80;
     public $pv = 75;
 
-    public function 
-    public function afficherMesInfos(){
-
-    }
 }
     include("common/header.php");
     include("common/menu1.php");
