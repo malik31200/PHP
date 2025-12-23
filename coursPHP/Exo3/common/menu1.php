@@ -10,5 +10,6 @@
         <li><a href="5-array.php">Excercice 7</a></li>
         <li><a href="6-info_character.php">Excercice 8</a></li>
         <li><a href="7-associative_arrays.php">Excercice 9</a></li>
+        <li><a href="8-array_of_arrays.php">Excercice 10</a></li>
     </ul>
 </nav>
