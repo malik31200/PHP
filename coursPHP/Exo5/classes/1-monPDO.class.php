@@ -4,7 +4,7 @@ class monPDO{
     private const HOST_NAME = "localhost";
     private const DB_NAME = "db_panierFruit";
     private const USER_NAME = "phpmyadmin";
-    private const PWD = "Holberton20250";
+    private const PWD = "Holberton2025";
 
     private static $monPDOinstance = null;
 
@@ -13,8 +13,8 @@ class monPDO{
         //on la crée si elle n'existe pas ou sinon on la retourne directement.
         if(is_null(self::$monPDOinstance)){ // pour s'assurer de réaliser cette action une fois.
             try {
-                $connexion = 'mysql:host='.HOST_NAME.';dbname='.DB_NAME;
-                self::$monPDOinstance = new PDO($connexion,USER_NAME,PWD, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+                $connexion = 'mysql:host='.self::HOST_NAME.';dbname='.self::DB_NAME;
+                self::$monPDOinstance = new PDO($connexion,self::USER_NAME,self::PWD, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
             } catch(PDOException $e){
                 $message = "erreur de connexion à la DB" .$e->getMessage();
                 die($message);
