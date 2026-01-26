@@ -5,5 +5,6 @@
         <li><a href="monPDO.php">PDO test</a></li>
         <li><a href="1-monPDO.php">PDO test 1</a></li>
         <li><a href="1-afficher_fruits.php">Fruits</a></li>
+        <li><a href="2-afficher_paniers.php">Paniers</a></li>
     </ul>
 </nav>
